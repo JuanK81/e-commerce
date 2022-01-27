@@ -13,5 +13,18 @@
     "email": "tester@test.com",
     "password": "tester",
     "id": "e69e226a"
+  },
+  {
+    "email": "test2@test.com",
+    "id": "1d395bc5"
+  },
+  {
+    "email": "test2@test.com",
+    "id": "4d1bfc92"
+  },
+  {
+    "email": "test2@test.com",
+    "id": "78ef65f7",
+    "password": "tester"
   }
 ]
