@@ -1,1 +1,22 @@
-[{"email":"tester@test.com","password":"tester"},{"email":"tester@test.com","password":"tester"},{"email":"tester@test.com","password":"tester"}]
+[
+  {
+    "email": "tester@test.com",
+    "password": "tester",
+    "id": "2979d0a6"
+  },
+  {
+    "email": "tester@test.com",
+    "password": "tester",
+    "id": "d851df2e"
+  },
+  {
+    "email": "tester@test.com",
+    "password": "tester",
+    "id": "c7f1e815"
+  },
+  {
+    "email": "tester@test.com",
+    "password": "tester",
+    "id": "e69e226a"
+  }
+]
