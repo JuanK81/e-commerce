@@ -17,7 +17,7 @@ class UsersRepository {
   }
 
   //Methods
-  
+
   async getAll() {
     return JSON.parse(
       await fs.promises.readFile(this.filename, {
@@ -33,6 +33,8 @@ class UsersRepository {
     records.push(attrs);
 
     await this.writeAll(records);
+
+    return attrs;
   }
 
   async writeAll(records) {
@@ -86,4 +88,4 @@ class UsersRepository {
   }
 }
 
-module.exports = new UsersRepository('useers.json');
+module.exports = new UsersRepository('users.json');
