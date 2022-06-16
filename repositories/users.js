@@ -4,10 +4,9 @@ const crypto = require('crypto');
 class UsersRepository {
   constructor(filename) {
     if (!filename) {
-      throw new Error('Creating a repository requires a filename.');
+      throw new Error('Creating a repository requires a filename');
     }
 
-    //no async code here, this is going to be used only once.
     this.filename = filename;
     try {
       fs.accessSync(this.filename);
@@ -16,12 +15,10 @@ class UsersRepository {
     }
   }
 
-  //Methods
-
   async getAll() {
     return JSON.parse(
       await fs.promises.readFile(this.filename, {
-        encoding: 'utf8',
+        encoding: 'utf8'
       })
     );
   }
@@ -38,7 +35,10 @@ class UsersRepository {
   }
 
   async writeAll(records) {
-    await fs.promises.writeFile(this.filename, JSON.stringify(records, null, 2));
+    await fs.promises.writeFile(
+      this.filename,
+      JSON.stringify(records, null, 2)
+    );
   }
 
   randomId() {
@@ -51,10 +51,9 @@ class UsersRepository {
   }
 
   async delete(id) {
-      const records = await this.getAll();
-      const filteredRecords = records.filter(record => record.id !== id);
-
-      await this.writeAll(filteredRecords);
+    const records = await this.getAll();
+    const filteredRecords = records.filter(record => record.id !== id);
+    await this.writeAll(filteredRecords);
   }
 
   async update(id, attrs) {
@@ -62,7 +61,7 @@ class UsersRepository {
     const record = records.find(record => record.id === id);
 
     if (!record) {
-        throw new Error(`Record with id ${id} not found.`);
+      throw new Error(`Record with id ${id} not found`);
     }
 
     Object.assign(record, attrs);
@@ -73,17 +72,17 @@ class UsersRepository {
     const records = await this.getAll();
 
     for (let record of records) {
-        let found = true;
+      let found = true;
 
-        for (let key in filters) {
-            if (record[key] !== filters[key]) {
-                found = false;
-            }
+      for (let key in filters) {
+        if (record[key] !== filters[key]) {
+          found = false;
         }
+      }
 
-        if (found) {
-            return record;
-        }
+      if (found) {
+        return record;
+      }
     }
   }
 }
