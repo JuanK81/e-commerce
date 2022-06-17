@@ -29,5 +29,15 @@
     "email": "test10@tester.com",
     "password": "58d1898ebe8c7768c88714b51c949e6ff75b468f11ba05202e4e4d9876bace2fa5df880c943fe77b1a54b442e19eb156fd3a878d51b0a5e52be52fab29e31fa6.2d02062a9683915f",
     "id": "47e379d8"
+  },
+  {
+    "email": "@sd",
+    "password": "d50deed49f83be0321193b9156810dcb832b5ce35560e2e7db3f859ebbc2098657d5e9d4cee8a9d0635fc45fb8315aaac96e884fe942ee9e69a09c44a8e5ee50.1550e587dbe9fb05",
+    "id": "64fa65f8"
+  },
+  {
+    "email": "test3@test.com",
+    "password": "8af54d8dbf0ae8bfd556ca5db3c8db9d923bf44c4e7aeac7543131513a021ff78725ec0b8ac164264c0551484d14f493512fe490361ed4ed44d438d3712748b5.5eec9eb8fdbd05eb",
+    "id": "cf928e56"
   }
 ]
